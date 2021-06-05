@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
 env:
   terraform: 0.15.0
   tf_target_dir: example/examplea
-  branch: master
+  branch: main
 jobs:
   terraform:
     runs-on: ubuntu-latest
