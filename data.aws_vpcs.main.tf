@@ -1,5 +1,5 @@
 data "aws_vpcs" "main" {
   tags = {
-    Name = "DEVELOPMENT"
+    Name = var.vpc_tag
   }
 }

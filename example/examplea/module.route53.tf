@@ -1,5 +1,6 @@
 module "route53" {
-  source = "../../"
-  name="freebeer"
-  comment="This is a comment"
+  source  = "../../"
+  name    = "freebeer"
+  comment = "This is a comment"
+  vpc_tag = "TEST"
 }
