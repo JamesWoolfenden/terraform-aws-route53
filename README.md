@@ -15,16 +15,15 @@ Terraform module to provision infra .
 Creates a zone.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -32,27 +31,26 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                  | Type        |
-| --------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_route53_zone.internal](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | resource    |
-| [aws_route53_zone.primary](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone)  | resource    |
-| [aws_vpcs.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpcs)                  | data source |
+| Name | Type |
+|------|------|
+| [aws_route53_zone.internal](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | resource |
+| [aws_route53_zone.primary](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | resource |
+| [aws_vpcs.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpcs) | data source |
 
 ## Inputs
 
-| Name                                                   | Description | Type     | Default | Required |
-| ------------------------------------------------------ | ----------- | -------- | ------- | :------: |
-| <a name="input_comment"></a> [comment](#input_comment) | n/a         | `string` | n/a     |   yes    |
-| <a name="input_name"></a> [name](#input_name)          | n/a         | `string` | n/a     |   yes    |
-| <a name="input_vpc_tag"></a> [vpc_tag](#input_vpc_tag) | n/a         | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_comment"></a> [comment](#input\_comment) | n/a | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_vpc_tag"></a> [vpc\_tag](#input\_vpc\_tag) | n/a | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                                                        | Description |
-| ----------------------------------------------------------- | ----------- |
-| <a name="output_internal"></a> [internal](#output_internal) | n/a         |
-| <a name="output_primary"></a> [primary](#output_primary)    | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_internal"></a> [internal](#output\_internal) | n/a |
+| <a name="output_primary"></a> [primary](#output\_primary) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
