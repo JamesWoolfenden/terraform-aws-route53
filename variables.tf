@@ -9,3 +9,9 @@ variable "comment" {
 variable "vpc_tag" {
   type = string
 }
+
+
+variable "kms_key_id" {
+  type        = string
+  description = "Encryption key"
+}
