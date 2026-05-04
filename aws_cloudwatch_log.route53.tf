@@ -4,6 +4,7 @@ resource "aws_cloudwatch_log_group" "route53" {
   kms_key_id        = var.kms_key_id
 }
 data "aws_iam_policy_document" "route53-query-logging-policy" {
+  # checkov:skip=CKV_AWS_356: IAM policy requires broad access for this module to function
   statement {
     actions = [
       "logs:CreateLogStream",
