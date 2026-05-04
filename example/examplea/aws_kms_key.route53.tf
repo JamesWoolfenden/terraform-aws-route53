@@ -1,8 +1,6 @@
-
-
 data "aws_caller_identity" "current" {}
-
 resource "aws_kms_key" "route53" {
+  # checkov:skip=CKV2_AWS_64: For example only, key policy managed via IAM
   enable_key_rotation      = true
   customer_master_key_spec = "ECC_NIST_P256"
   deletion_window_in_days  = 7
