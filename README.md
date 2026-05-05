@@ -84,12 +84,28 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "ec2:DescribeAccountAttributes",
                 "ec2:DescribeVpcs"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "kms:CreateGrant",
+                "kms:DescribeKey",
+                "kms:GetPublicKey",
+                "kms:Sign"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
                 "logs:AssociateKmsKey",
@@ -100,25 +116,40 @@ resource "aws_iam_policy" "terraform_pike" {
                 "logs:DescribeLogGroups",
                 "logs:DescribeResourcePolicies",
                 "logs:DisassociateKmsKey",
+                "logs:ListTagsForResource",
                 "logs:ListTagsLogGroup",
                 "logs:PutResourcePolicy",
                 "logs:PutRetentionPolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
-            "Sid": "VisualEditor2",
+            "Sid": "VisualEditor3",
             "Effect": "Allow",
             "Action": [
+                "route53:ActivateKeySigningKey",
                 "route53:AssociateVPCWithHostedZone",
                 "route53:CreateHostedZone",
+                "route53:CreateKeySigningKey",
+                "route53:CreateQueryLoggingConfig",
+                "route53:DeactivateKeySigningKey",
                 "route53:DeleteHostedZone",
+                "route53:DeleteKeySigningKey",
+                "route53:DeleteQueryLoggingConfig",
+                "route53:DisableHostedZoneDNSSEC",
+                "route53:EnableHostedZoneDNSSEC",
                 "route53:GetChange",
+                "route53:GetDNSSEC",
                 "route53:GetHostedZone",
+                "route53:GetQueryLoggingConfig",
                 "route53:ListResourceRecordSets",
                 "route53:ListTagsForResource"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
