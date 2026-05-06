@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_log_group" "route53" {
   name              = "/route53/querylog/"
-  retention_in_days = 60
+  retention_in_days = 365
   kms_key_id        = var.kms_key_id
 }
 data "aws_iam_policy_document" "route53-query-logging-policy" {
